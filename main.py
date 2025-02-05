@@ -1,20 +1,20 @@
-
 def fizzbuzz(i):
+    result = ""
     if i % 3 == 0 and i % 5 == 0:
-        print('FizzBuzz', end="")
+        result = "FizzBuzz"
     elif i % 3 == 0:
-        print('Fizz', end="")
+        result = "Fizz"
     elif i % 5 == 0:
-        print('Buzz', end="")
+        result = "Buzz"
     else:
-        print(i)
-    stringified = str(i)
-    if "3" in stringified:
-        print('Fizz', end="")
-    if "5" in stringified:
-        print('Buzz', end="")
+        result = str(i)
 
-    print()
+    if "3" in str(i):
+        result += "Fizz"
+    if "5" in str(i):
+        result += "Buzz"
+
+    print(result)
 
 def main():
     for i in range(1, 101):
