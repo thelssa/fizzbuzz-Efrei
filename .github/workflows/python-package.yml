@@ -23,7 +23,8 @@ jobs:
         run: |
           pip install --upgrade pip
 
-      - name: Run tests
+      - name: Run FizzBuzz tests
         run: |
-          python -m unittest .\tests\tests.py
+          python -m unittest discover -s test
+
 
