@@ -24,6 +24,7 @@ def fizzbuzz(i):
 
     print(result)
 
+
 def main():
     """
     main function to test fizzbuzz
@@ -35,6 +36,6 @@ def main():
     fizzbuzz(53)
     fizzbuzz(35)
 
-if __name__ == '__main__':
-    main()
 
+if __name__ == "__main__":
+    main()

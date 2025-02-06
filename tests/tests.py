@@ -1,8 +1,9 @@
 # Test cases for fizzbuzz function
 
+import sys
 import unittest
 from io import StringIO
-import sys
+
 from main import fizzbuzz
 
 
@@ -10,6 +11,7 @@ class TestFizzBuzz(unittest.TestCase):
     """
     Test cases for fizzbuzz function
     """
+
     def setUp(self):
         """
         Redirect stdout to StringIO
@@ -73,5 +75,5 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertEqual(sys.stdout.getvalue().strip(), "7")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
