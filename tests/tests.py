@@ -7,6 +7,9 @@ from main import fizzbuzz
 
 
 class TestFizzBuzz(unittest.TestCase):
+    """
+    Test cases for fizzbuzz function
+    """
     def setUp(self):
         """
         Redirect stdout to StringIO
