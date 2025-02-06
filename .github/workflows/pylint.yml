@@ -1,19 +1,36 @@
-name: Linting
-on: push
-permissions: read-all
+name: Python Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   lint:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          fetch-depth: 0
-      - name: Install Python
-        uses: ./.github/actions/install-py/
-      - name: Run pylint
-        run: pylint ./**/*.py
-      - name: Run actionlint
-        uses: raven-actions/actionlint@v2
-        with:
-          files: ".github/workflows/*.yml"
+          python-version: '3.9'
+      
+      - name: Install linting dependencies
+        run: |
+          pip install flake8 black
+      
+      - name: Run Flake8
+        run: |
+          echo "Lancement de l'analyse Flake8..."
+          flake8 .
+      
+      - name: Check code format with Black
+        run: |
+          echo "Vérification du formatage avec Black..."
+          black --check .
