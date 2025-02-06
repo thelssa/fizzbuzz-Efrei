@@ -2,9 +2,9 @@ name: Auto-Lint
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main","Docker" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main","Docker" ]
 
 permissions:
   contents: write
