@@ -2,9 +2,9 @@ name: Python Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main","Docker" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main","Docker" ]
 
 jobs:
   build-and-test:
