@@ -25,7 +25,7 @@ jobs:
 
       - name: Run FizzBuzz tests
         run: |
-          python -m unittest test/tests.py
+          python -m unittest tests/tests.py
 
 
 
