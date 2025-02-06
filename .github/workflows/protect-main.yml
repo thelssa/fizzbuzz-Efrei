@@ -1,0 +1,14 @@
+name: Prevent Direct Push to Main
+
+on: push
+
+jobs:
+  block_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch
+        run: |
+          if [[ $GITHUB_REF == "refs/heads/main" ]]; then
+            echo "Direct pushes to main are not allowed!"
+            exit 1
+          fi
