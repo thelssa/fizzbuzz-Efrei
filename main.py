@@ -1,4 +1,9 @@
 def fizzbuzz(i):
+    """
+    This function prints "Fizz" if i is divisible by 3, "Buzz" if i is divisible by 5, "FizzBuzz" if i is divisible by 3 and 5,
+    :param i: int
+    :return: None
+    """
     result = ""
     if i % 3 == 0 and i % 5 == 0:
         result = "FizzBuzz"
@@ -17,7 +22,11 @@ def fizzbuzz(i):
     print(result)
 
 def main():
-    for i in range(1, 101):
+    """
+    main function to test fizzbuzz
+    :return:
+    """
+    for i in range(1, 100):
         fizzbuzz(i)
 
     fizzbuzz(53)
