@@ -1,7 +1,10 @@
+# Test cases for fizzbuzz function
+
 import unittest
 from io import StringIO
 import sys
 from main import fizzbuzz
+
 
 class TestFizzBuzz(unittest.TestCase):
     def setUp(self):
@@ -65,6 +68,7 @@ class TestFizzBuzz(unittest.TestCase):
         """
         fizzbuzz(7)
         self.assertEqual(sys.stdout.getvalue().strip(), "7")
+
 
 if __name__ == '__main__':
     unittest.main()
