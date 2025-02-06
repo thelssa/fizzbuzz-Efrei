@@ -1,6 +1,7 @@
 def fizzbuzz(i):
     """
-    This function prints "Fizz" if i is divisible by 3, "Buzz" if i is divisible by 5, "FizzBuzz" if i is divisible by 3 and 5,
+    This function prints "Fizz" if i is divisible by 3, "Buzz" if i is divisible by 5, "FizzBuzz"
+    if i is divisible by 3 and 5,
     :param i: int
     :return: None
     """
